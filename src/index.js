@@ -7,12 +7,15 @@ import { fileURLToPath } from 'url';
 const app = express();
 const port = 3000;
 
-// Http logger
-app.use(morgan('combined'));
-
 // Path
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Public path
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Http logger
+app.use(morgan('combined'));
 
 // Template engine
 app.engine('hbs', engine({extname: '.hbs'}));
