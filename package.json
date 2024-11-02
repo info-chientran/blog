@@ -2,6 +2,7 @@
   "name": "blog",
   "version": "1.0.0",
   "main": "index.js",
+  "type" : "module",
   "scripts": {
     "dev": "nodemon --inspect src/index.js",
     "watch": "sass --watch src/resources/scss/app.scss src/public/css/app.css",
