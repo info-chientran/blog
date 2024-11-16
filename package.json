@@ -1,36 +1,44 @@
 {
-  "name": "blog",
-  "version": "1.0.0",
-  "main": "index.js",
-  "type" : "module",
-  "scripts": {
-    "dev": "nodemon --inspect src/index.js",
-    "watch": "sass --watch src/resources/scss/app.scss src/public/css/app.css",
-    "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/info-chientran/blog.git"
-  },
-  "keywords": [
-    "blog",
-    "nodejs"
-  ],
-  "author": "chientran",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/info-chientran/blog/issues"
-  },
-  "homepage": "https://github.com/info-chientran/blog#readme",
-  "description": "",
-  "dependencies": {
-    "express": "^4.21.1",
-    "express-handlebars": "^8.0.1"
-  },
-  "devDependencies": {
-    "morgan": "^1.10.0",
-    "nodemon": "^3.1.7",
-    "sass": "^1.80.6"
-  }
+    "name": "blog",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "dev": "nodemon --inspect src/index.js",
+        "watch": "sass --watch src/resources/scss/app.scss src/public/css/app.css",
+        "start": "node src/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "lint-staged"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/info-chientran/blog.git"
+    },
+    "keywords": [
+        "blog",
+        "nodejs"
+    ],
+    "author": "chientran",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/info-chientran/blog/issues"
+    },
+    "homepage": "https://github.com/info-chientran/blog#readme",
+    "description": "",
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    },
+    "dependencies": {
+        "express": "^4.21.1",
+        "express-handlebars": "^8.0.1"
+    },
+    "devDependencies": {
+        "concurrently": "^9.0.1",
+        "husky": "^9.1.6",
+        "lint-staged": "^15.2.10",
+        "morgan": "^1.10.0",
+        "nodemon": "^3.1.7",
+        "prettier": "^3.3.3",
+        "sass": "^1.80.6"
+    }
 }

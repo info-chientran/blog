@@ -10,5 +10,5 @@ class NewsController {
     }
 }
 
-const newController = new NewsController;
+const newController = new NewsController();
 export default newController;

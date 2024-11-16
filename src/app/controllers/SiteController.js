@@ -10,5 +10,5 @@ class SiteController {
     }
 }
 
-const siteController = new SiteController;
+const siteController = new SiteController();
 export default siteController;
